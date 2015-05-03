@@ -4,7 +4,8 @@
   "description": "gulp task to create angular architecture graph",
   "main": "index.js",
   "scripts": {
-    "pretest": "tsc --module commonjs --noImplicitAny angular-to-dgml.ts test/angular-to-dgml.spec.ts",
+    "tsc": "tsc --module commonjs --noImplicitAny angular-to-dgml.ts test/angular-to-dgml.spec.ts",
+    "pretest": "npm run-script tsc",
     "test": "mocha --reporter spec"
   },
   "repository": {
