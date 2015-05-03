@@ -1,4 +1,5 @@
-![status](https://secure.travis-ci.org/GaryB432/gulp-ng-dgml.svg?branch=master)
+[![Build Status](https://secure.travis-ci.org/GaryB432/gulp-ng-dgml.svg?branch=master)](https://travis-ci.org/GaryB432/gulp-ng-dgml)
+
 
 ## Information
 

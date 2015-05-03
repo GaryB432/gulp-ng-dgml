@@ -1,6 +1,6 @@
 {
-  "name": "gulp-angular-architecture-dgml",
-  "version": "0.9.0",
+  "name": "gulp-ng-dgml",
+  "version": "1.0.0",
   "description": "gulp task to create angular architecture graph",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GaryB432/gulp-angular-architecture-dgml.git"
+    "url": "https://github.com/GaryB432/gulp-ng-dgml.git"
   },
   "keywords": [
     "gulp",
@@ -17,21 +17,25 @@
     "architecture",
     "dgml"
   ],
-  "author": "",
+  "author": {
+    "name" : "Gary Bortosky",
+    "email" : "gary@bortosky.com",
+    "url" : "http://bortosky.com/gary/#/"
+  },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GaryB432/gulp-angular-architecture-dgml/issues"
+    "url": "https://github.com/GaryB432/gulp-ng-dgml/issues"
   },
-  "homepage": "https://github.com/GaryB432/gulp-angular-architecture-dgml",
+  "homepage": "https://github.com/GaryB432/gulp-ng-dgml",
   "dependencies": {
     "angular-architecture-graph": "^0.2.3",
-    "gulp": "^3.8.11",
     "through2": "^0.6.5",
     "ts-dgml": "^2.1.0",
     "vinyl": "^0.4.6"
   },
   "devDependencies": {
     "chai": "^2.3.0",
+    "gulp": "^3.8.11",
     "mocha": "^2.2.4"
   }
 }
