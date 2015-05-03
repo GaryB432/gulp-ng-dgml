@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc --module commonjs --noImplicitAny angular-to-dgml.ts test/angular-to-dgml.spec.ts",
+    "prepublish": "npm run-script tsc",
     "pretest": "npm run-script tsc",
     "test": "mocha --reporter spec"
   },
