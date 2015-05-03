@@ -1,0 +1,37 @@
+{
+  "name": "gulp-angular-architecture-dgml",
+  "version": "0.9.0",
+  "description": "gulp task to create angular architecture graph",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "tsc --module commonjs --noImplicitAny angular-to-dgml.ts test/angular-to-dgml.spec.ts",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GaryB432/gulp-angular-architecture-dgml.git"
+  },
+  "keywords": [
+    "gulp",
+    "angular",
+    "architecture",
+    "dgml"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaryB432/gulp-angular-architecture-dgml/issues"
+  },
+  "homepage": "https://github.com/GaryB432/gulp-angular-architecture-dgml",
+  "dependencies": {
+    "angular-architecture-graph": "^0.2.3",
+    "gulp": "^3.8.11",
+    "through2": "^0.6.5",
+    "ts-dgml": "^2.1.0",
+    "vinyl": "^0.4.6"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
+  }
+}

@@ -1,0 +1,1 @@
+angular.module('funmodule', ['fun', 'stuff']).directive('asdf', ['a', 'b', function(){}]);
