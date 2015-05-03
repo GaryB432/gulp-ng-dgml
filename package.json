@@ -1,6 +1,6 @@
 {
   "name": "gulp-ng-dgml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gulp task to create angular architecture graph",
   "main": "index.js",
   "scripts": {
@@ -31,13 +31,13 @@
   "homepage": "https://github.com/GaryB432/gulp-ng-dgml",
   "dependencies": {
     "angular-architecture-graph": "^0.2.3",
+    "gulp": "^3.8.11",
     "through2": "^0.6.5",
     "ts-dgml": "^2.1.0",
     "vinyl": "^0.4.6"
   },
   "devDependencies": {
     "chai": "^2.3.0",
-    "gulp": "^3.8.11",
     "mocha": "^2.2.4"
   }
 }
