@@ -13,7 +13,7 @@ function getDirectedGraphFromArchJsonPath(path: string): dgml.DirectedGraph {
     return graph;
 }
 
-describe.only('angular architecture graph to directed graph',() => {
+describe('angular architecture graph to directed graph',() => {
     describe('ui-utils-keypress',() => {
         var graph: dgml.DirectedGraph;
 
