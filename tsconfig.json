@@ -3,9 +3,8 @@
         "module": "commonjs",
         "noImplicitAny": true,
         "removeComments": true,
-        "preserveConstEnums": true,
         "sourceMap": false,
         "listFiles": true,
-        "declaration": true
+        "declaration": false
     }
 }
