@@ -33,7 +33,7 @@ module angularToDgml {
         colors: ICategoryColors;
     }
 
-    interface ICategoryColors {
+    export interface ICategoryColors {
         modules?: string;
         controllers?: string;
         services?: string;
