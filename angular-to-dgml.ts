@@ -2,8 +2,8 @@
 import mocha = require('mocha');
 import dgml = require('ts-dgml');
 
-module angularToDgml { 
-    export module IAngularGraph {
+namespace angularToDgml { 
+    export namespace IAngularGraph {
         export interface IAngular {
             modules: IModule[];
             modulesMap: any;
