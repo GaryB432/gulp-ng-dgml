@@ -1,5 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/GaryB432/gulp-ng-dgml.svg?branch=master)](https://travis-ci.org/GaryB432/gulp-ng-dgml)
 
+[![NPM](https://nodei.co/npm/gulp-ng-dgml.png)](https://nodei.co/npm/gulp-ng-dgml/)
+
 ## Information
 
 <table>
