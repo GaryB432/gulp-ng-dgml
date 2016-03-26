@@ -2,7 +2,7 @@
 
 import fs = require('fs');
 import xml = require('xml');
-import chai = require('chai');
+import assert = require('assert');
 import dgml = require('ts-dgml');
 import ngdgml = require('../angular-to-dgml');
 
@@ -13,15 +13,15 @@ function getDirectedGraphFromArchJsonPath(path: string): dgml.DirectedGraph {
     return graph;
 }
 
-describe('angular architecture graph to directed graph',() => {
-    describe('ui-utils-keypress',() => {
+describe('angular architecture graph to directed graph', () => {
+    describe('ui-utils-keypress', () => {
         var graph: dgml.DirectedGraph;
 
         before(() => {
             graph = getDirectedGraphFromArchJsonPath('test/fixtures/ui-utils-keypress.json');
         });
-        
-        it('should have proper xml',() => {
+
+        it('should have proper xml', () => {
             var xml = '<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">'
                 + '<Nodes>'
                 + '<Node Id="ui.keypress" Label="ui.keypress" Category="Module"/>'
@@ -53,7 +53,7 @@ describe('angular architecture graph to directed graph',() => {
                 + '</Categories>'
                 + '</DirectedGraph>';
 
-            chai.expect(new dgml.nodeXml.Serializer(graph, { indent: false }).toDgml()).to.equal(xml);
+            assert.equal(new dgml.nodeXml.Serializer(graph, { indent: false }).toDgml(), xml);
         });
     });
 });
