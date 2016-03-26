@@ -1,42 +1,42 @@
 {
-  "name": "gulp-ng-dgml",
-  "version": "1.0.4",
-  "description": "gulp task to create angular architecture graph",
-  "main": "index.js",
-  "scripts": {
-    "prepublish": "tsc",
-    "pretest": "tsc",
-    "test": "mocha --reporter spec"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/GaryB432/gulp-ng-dgml.git"
-  },
-  "keywords": [
-    "gulp",
-    "angular",
-    "architecture",
-    "dgml"
-  ],
-  "author": {
-    "name": "Gary Bortosky",
-    "email": "gary@bortosky.com",
-    "url": "http://bortosky.com/gary/#/"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GaryB432/gulp-ng-dgml/issues"
-  },
-  "homepage": "https://github.com/GaryB432/gulp-ng-dgml",
-  "dependencies": {
-    "angular-architecture-graph": "^0.2.3",
-    "through2": "^0.6.5",
-    "ts-dgml": "^2.1.1",
-    "vinyl": "^0.4.6"
-  },
-  "devDependencies": {
-    "chai": "^3.2.0",
-    "gulp": "^3.9.0",
-    "mocha": "^2.2.5"
-  }
+    "name": "gulp-ng-dgml",
+    "version": "2.0.0",
+    "description": "gulp task to create angular architecture graph",
+    "main": "index.js",
+    "scripts": {
+        "prepublish": "tsc",
+        "pretest": "tsc",
+        "test": "mocha --reporter spec"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GaryB432/gulp-ng-dgml.git"
+    },
+    "keywords": [
+        "gulp",
+        "angular",
+        "architecture",
+        "dgml"
+    ],
+    "author": {
+        "name": "Gary Bortosky",
+        "email": "gary@bortosky.com",
+        "url": "http://bortosky.com/gary/#/"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GaryB432/gulp-ng-dgml/issues"
+    },
+    "homepage": "https://github.com/GaryB432/gulp-ng-dgml",
+    "dependencies": {
+        "angular-architecture-graph": "^0.2.3",
+        "through2": "^0.6.5",
+        "ts-dgml": "^3.0.0",
+        "vinyl": "^0.4.6"
+    },
+    "devDependencies": {
+        "chai": "^3.2.0",
+        "gulp": "^3.9.0",
+        "mocha": "^2.2.5"
+    }
 }

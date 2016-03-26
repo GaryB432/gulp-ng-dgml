@@ -50,7 +50,6 @@ describe('angular architecture graph to directed graph',() => {
                 + '<Category Id="Provider" Label="Provider" Background="#FF7FFF00"/>'
                 + '<Category Id="Directive" Label="Directive" Background="#FF008000"/>'
                 + '<Category Id="External" Label="External" Background="#FF808000"/>'
-                + '<Category Id="External"/>'
                 + '</Categories>'
                 + '</DirectedGraph>';
 

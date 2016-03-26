@@ -1,8 +1,8 @@
 ﻿/// <reference path="typings/tsd.d.ts" />
-import mocha = require('mocha');
-import dgml = require('ts-dgml');
+import mocha = require("mocha");
+import dgml = require("ts-dgml");
 
-namespace angularToDgml { 
+namespace angularToDgml {
     export namespace IAngularGraph {
         export interface IAngular {
             modules: IModule[];
@@ -49,53 +49,53 @@ namespace angularToDgml {
             if (options === void 0) {
                 options = {
                     colors: {
-                        controllers: '#FFFF0000',
-                        services: '#FF0000FF',
-                        factories: '#FFFFA500',
-                        filters: '#FFFFC0CB',
-                        providers: '#FF7FFF00',
-                        directives: '#FF008000',
-                        externals: '#FF808000'
+                        controllers: "#FFFF0000",
+                        services: "#FF0000FF",
+                        factories: "#FFFFA500",
+                        filters: "#FFFFC0CB",
+                        providers: "#FF7FFF00",
+                        directives: "#FF008000",
+                        externals: "#FF808000"
                     }
-                }
+                };
             }
 
             function addFeature(item: HashTable<IAngularGraph.IModuleItem>, nmodule: IAngularGraph.IModule, category: string) {
 
-                for (var s in item) {
+                for (let s in item) {
                     dg.nodes.push(new dgml.Node(s, s, category));
                     dg.links.push(new dgml.Link(nmodule.name, s));
 
-                    item[s].deps.forEach(d=> {
-                        dg.links.push(new dgml.Link(s, d))
+                    item[s].deps.forEach(d => {
+                        dg.links.push(new dgml.Link(s, d));
                     });
                 }
             }
 
             ng.modules.forEach((nmodule) => {
 
-                var controllers: HashTable<IAngularGraph.IModuleItem> = {},
+                let controllers: HashTable<IAngularGraph.IModuleItem> = {},
                     services: HashTable<IAngularGraph.IModuleItem> = {},
                     factories: HashTable<IAngularGraph.IModuleItem> = {},
                     filters: HashTable<IAngularGraph.IModuleItem> = {},
                     providers: HashTable<IAngularGraph.IModuleItem> = {},
                     directives: HashTable<IAngularGraph.IModuleItem> = {};
 
-                nmodule.controllers.forEach(s=> controllers[s.name] = s);
-                nmodule.services.forEach(s=> services[s.name] = s);
-                nmodule.factories.forEach(s=> factories[s.name] = s);
-                nmodule.filters.forEach(s=> filters[s.name] = s);
-                nmodule.providers.forEach(s=> providers[s.name] = s);
-                nmodule.directives.forEach(s=> directives[s.name] = s);
+                nmodule.controllers.forEach(s => controllers[s.name] = s);
+                nmodule.services.forEach(s => services[s.name] = s);
+                nmodule.factories.forEach(s => factories[s.name] = s);
+                nmodule.filters.forEach(s => filters[s.name] = s);
+                nmodule.providers.forEach(s => providers[s.name] = s);
+                nmodule.directives.forEach(s => directives[s.name] = s);
 
                 if (nmodule.modules !== void 0) {
-                    nmodule.modules.forEach(cm=> {
+                    nmodule.modules.forEach(cm => {
                         dg.nodes.push(new dgml.Node(cm, cm, "Module"));
                         dg.links.push(new dgml.Link(nmodule.name, cm));
                     });
                 }
 
-                dg.nodes.push(new dgml.Node(nmodule.name, nmodule.name, 'Module'));
+                dg.nodes.push(new dgml.Node(nmodule.name, nmodule.name, "Module"));
 
                 addFeature(controllers, nmodule, "Controller");
                 addFeature(services, nmodule, "Service");
@@ -105,22 +105,21 @@ namespace angularToDgml {
                 addFeature(directives, nmodule, "Directive");
             });
 
-            var cats: any[] = [
-                ['Module', options.colors.modules],
-                ['Controller', options.colors.controllers],
-                ['Service', options.colors.services],
-                ['Factory', options.colors.factories],
-                ['Filter', options.colors.filters],
-                ['Provider', options.colors.providers],
-                ['Directive', options.colors.directives],
-                ['External', options.colors.externals]
-            ]
+            let cats: any[] = [
+                ["Module", options.colors.modules],
+                ["Controller", options.colors.controllers],
+                ["Service", options.colors.services],
+                ["Factory", options.colors.factories],
+                ["Filter", options.colors.filters],
+                ["Provider", options.colors.providers],
+                ["Directive", options.colors.directives],
+                ["External", options.colors.externals]
+            ];
 
-            dg.categories = cats.map(cat=> new dgml.Category(cat[0], cat[0], { Background: cat[1] }));
+            dg.categories = cats.map(cat => new dgml.Category(cat[0], cat[0], { Background: cat[1] }));
 
-            dg.addExternalNodes('External');
+            dg.addExternalNodes("External");
         }
     }
 }
 export = angularToDgml;
-
