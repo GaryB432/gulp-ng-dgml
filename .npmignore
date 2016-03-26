@@ -2,6 +2,7 @@ node_modules
 .travis.yml
 .gitattributes
 tsconfig.json
+gulpfile.js
 tslint.json
 test
 typings
