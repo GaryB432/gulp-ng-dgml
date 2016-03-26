@@ -1,6 +1,8 @@
 node_modules
 .travis.yml
 .gitattributes
+tsconfig.json
+tslint.json
 test
 typings
 **/*.ts
